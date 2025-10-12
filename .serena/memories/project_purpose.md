@@ -1,0 +1,1 @@
+The project aims to build a secure, maintainable Leave Management System (MVP). Key features include user authentication, role-based access, leave request management (create/edit/delete), approval workflows, leave balance tracking, an admin UI for user and leave-type management, document uploads, email notifications, and basic organizational reporting.

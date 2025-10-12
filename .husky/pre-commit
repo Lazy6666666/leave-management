@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+# Run repo-structure validation before committing
+npm run validate-structure || exit 1
+# Optionally run lint
+# npm run lint || exit 1

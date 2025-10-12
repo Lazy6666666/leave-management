@@ -1,0 +1,31 @@
+{
+  "name": "leave-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=frontend",
+    "test": "npm test --workspace=frontend",
+    "test:e2e": "npm run test:e2e --workspace=frontend",
+    "lint": "npm run lint --workspace=frontend",
+    "type-check": "npm run type-check --workspace=frontend",
+    "validate-structure": "node ./scripts/validate-repo-structure.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "13.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^0.25.0",
+    "playwright": "^1.28.0"
+  }
+}

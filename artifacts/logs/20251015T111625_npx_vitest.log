@@ -1,0 +1,22 @@
+Command: npx vitest
+CWD: frontend
+
+=== STDOUT ===
+
+
+=== STDERR ===
+Exception: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\Twisted\Downloads\mcp_prod_package_full\server.py", line 141, in _run_subprocess
+    proc = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout, env=os.environ.copy())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Twisted\AppData\Roaming\uv\python\cpython-3.12.10-windows-x86_64-none\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Twisted\AppData\Roaming\uv\python\cpython-3.12.10-windows-x86_64-none\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\Twisted\AppData\Roaming\uv\python\cpython-3.12.10-windows-x86_64-none\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+

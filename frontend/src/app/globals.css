@@ -1,26 +1,715 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global app background with gradient */
+body {
+  background: linear-gradient(135deg, var(--app-grad-1), var(--app-grad-2), var(--app-grad-3));
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Modern Card Design */
+.modern-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.modern-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+}
+
+.dark .modern-card {
+  background: rgba(15, 23, 42, 0.2);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.dark .modern-card:hover {
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+
+.dark .glass-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Theme toggle styles */
+.toggle-pill {
+  background: white;
+  border-radius: 9999px;
+  padding: 2px;
+}
+
+.toggle-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ===== Core Palette ===== */
+  --background: #f7fbff; /* soft light blue */
+  --foreground: #0f172a; /* slate-900 */
+  --card-bg: rgba(255, 255, 255, 0.55);
+  --card-border: rgba(255, 255, 255, 0.6);
+  --card-shadow-1: 0 12px 24px rgba(16, 24, 40, 0.12);
+  --card-shadow-2: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --glass-blur: 16px;
+  --glass-saturate: 180%;
+
+  /* ===== Background Gradient Stops ===== */
+  --app-grad-1: #b9e6ff;
+  --app-grad-2: #93c5fd;
+  --app-grad-3: #60a5fa;
+
+  --login-grad-1: #b9e6ff;
+  --login-grad-2: #93c5fd;
+  --login-grad-3: #60a5fa;
+
+  /* ===== Enhanced Gradient Variables (Section 7.2.2 from TASK.md) ===== */
+  /* Primary Gradient */
+  --gradient-primary-start: #b9e6ff;
+  --gradient-primary-mid: #93c5fd;
+  --gradient-primary-end: #60a5fa;
+
+  /* Accent Gradient */
+  --gradient-accent-start: #60a5fa;
+  --gradient-accent-end: #3b82f6;
+
+  /* Success Gradient */
+  --gradient-success-start: #86efac;
+  --gradient-success-end: #22c55e;
+
+  /* Warning Gradient */
+  --gradient-warning-start: #fde047;
+  --gradient-warning-end: #eab308;
+
+  /* Danger Gradient */
+  --gradient-danger-start: #fca5a5;
+  --gradient-danger-end: #ef4444;
+
+  /* ===== Glass Effect Variables (Section 7.2.1) ===== */
+  /* Heavy Glass - Cards and modals (20px blur, 40-55% opacity) */
+  --glass-heavy-blur: 20px;
+  --glass-heavy-opacity: 0.4;
+  --glass-heavy-saturate: 180%;
+
+  /* Medium Glass - Inputs and dropdowns (16px blur, 60-75% opacity) */
+  --glass-medium-blur: 16px;
+  --glass-medium-opacity: 0.65;
+  --glass-medium-saturate: 180%;
+
+  /* Light Glass - Headers and footers (12px blur, 80-90% opacity) */
+  --glass-light-blur: 12px;
+  --glass-light-opacity: 0.85;
+  --glass-light-saturate: 150%;
+
+  /* Subtle Glass - Table rows and list items (8px blur, 90-95% opacity) */
+  --glass-subtle-blur: 8px;
+  --glass-subtle-opacity: 0.92;
+  --glass-subtle-saturate: 120%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0c1016;
+    --foreground: #e6e6e6;
+    --card-bg: rgba(17, 25, 40, 0.75);
+    --card-border: rgba(255, 255, 255, 0.125);
+    --card-shadow-1: 0 12px 24px rgba(0, 0, 0, 0.35);
+    --card-shadow-2: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    --login-grad-1: #0b1b2b;
+    --login-grad-2: #0c0f13;
+    --login-grad-3: #12151a;
+
+    /* Dark mode gradients */
+    --gradient-primary-start: #1e3a8a;
+    --gradient-primary-mid: #1e40af;
+    --gradient-primary-end: #2563eb;
+
+    --gradient-accent-start: #3b82f6;
+    --gradient-accent-end: #2563eb;
+
+    --gradient-success-start: #166534;
+    --gradient-success-end: #22c55e;
+
+    --gradient-warning-start: #854d0e;
+    --gradient-warning-end: #eab308;
+
+    --gradient-danger-start: #991b1b;
+    --gradient-danger-end: #ef4444;
   }
 }
 
+/* Class-based dark overrides for next-themes */
+.dark {
+  --background: #0c1016;
+  --foreground: #e6e6e6;
+  --card-bg: rgba(17, 25, 40, 0.75);
+  --card-border: rgba(255, 255, 255, 0.125);
+  --card-shadow-1: 0 12px 24px rgba(0, 0, 0, 0.35);
+  --card-shadow-2: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+  --glass-saturate: 180%;
+
+  /* Gradient stops for app background */
+  --app-grad-1: #0b1b2b;
+  --app-grad-2: #0c0f13;
+  --app-grad-3: #12151a;
+
+  /* Gradient stops for login background */
+  --login-grad-1: #0b1b2b;
+  --login-grad-2: #0c0f13;
+  --login-grad-3: #12151a;
+
+  /* Dark mode gradients */
+  --gradient-primary-start: #1e3a8a;
+  --gradient-primary-mid: #1e40af;
+  --gradient-primary-end: #2563eb;
+
+  --gradient-accent-start: #3b82f6;
+  --gradient-accent-end: #2563eb;
+
+  --gradient-success-start: #166534;
+  --gradient-success-end: #22c55e;
+
+  --gradient-warning-start: #854d0e;
+  --gradient-warning-end: #eab308;
+
+  --gradient-danger-start: #991b1b;
+  --gradient-danger-end: #ef4444;
+}
+
+/* Explicit dark theme variables for class-based theming */
+.dark :root {
+  --background: #0a0f16; /* deep dark blue/grey */
+  --foreground: #e6e6e6;
+}
+
+/* Dark-mode login background: deep blue → dark grey gradient with subtle pattern */
+.login-bg {
+  min-height: 100vh;
+  background-image:
+    radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.35), rgba(255,255,255,0) 60%),
+    radial-gradient(1000px 500px at 90% 20%, rgba(255,255,255,0.25), rgba(255,255,255,0) 60%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px),
+    linear-gradient(135deg, var(--login-grad-1) 0%, var(--login-grad-2) 50%, var(--login-grad-3) 100%);
+}
+
+/* Glassmorphism card helper */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow-2), var(--card-shadow-1);
+  border-radius: 18px;
+}
+
+/* Reusable form and link utilities to avoid inline Tailwind styling */
+.input-glass {
+  background-color: rgba(255,255,255,0.75);
+  color: hsl(var(--foreground));
+  border: 1px solid rgba(255,255,255,0.6);
+}
+.dark .input-glass {
+  background-color: rgba(18, 22, 29, 0.6);
+  color: #e6e6e6;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.label-muted { color: rgba(15,23,42,0.8); }
+.dark .label-muted { color: rgba(230,230,230,0.92); }
+
+.link-accent { color: #2563eb; }
+.link-accent:hover { color: #1d4ed8; }
+.dark .link-accent { color: #60a5fa; }
+.dark .link-accent:hover { color: #93c5fd; }
+
+.btn-primary-gradient {
+  background-image: linear-gradient(90deg, #60a5fa, #2563eb);
+  color: #ffffff;
+}
+.dark .btn-primary-gradient {
+  background-image: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: #ffffff;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Glass controls appended for stronger effects */
+:root { --glass-blur: 16px; --glass-saturate: 180%; }
+
+/* Smaller glass toggle helper */
+.toggle-glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(10px) saturate(var(--glass-saturate));
+  border: 1px solid var(--card-border);
+  color: hsl(var(--foreground));
+  border-radius: 10px;
+}
+
+/* Icon-based pill toggle with glass and glow */
+.toggle-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 28px;
+  padding: 0;
+  border-radius: 9999px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: hsl(var(--foreground));
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  transition: box-shadow 200ms ease, transform 150ms ease;
+}
+.toggle-pill:hover { box-shadow: 0 12px 28px rgba(16, 24, 40, 0.18); }
+.toggle-pill:active { transform: translateY(1px); }
+
+.dark .toggle-pill { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35); }
+.dark .toggle-pill:hover { box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45); }
+
+.toggle-thumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Status Badge Gradients */
+.bg-gradient-success {
+  background: linear-gradient(90deg, #86efac, #22c55e);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(90deg, #fde047, #eab308);
+}
+
+.bg-gradient-danger {
+  background: linear-gradient(90deg, #fca5a5, #ef4444);
+}
+
+.dark .bg-gradient-success {
+  background: linear-gradient(90deg, #166534, #22c55e);
+}
+
+.dark .bg-gradient-warning {
+  background: linear-gradient(90deg, #854d0e, #eab308);
+}
+
+.dark .bg-gradient-danger {
+  background: linear-gradient(90deg, #991b1b, #ef4444);
+}
+
+/* ========================================================================
+   GLASS EFFECT VARIANTS (Section 7.2.1)
+   ======================================================================== */
+
+/* ===== Heavy Glass - Cards and Modals ===== */
+.glass-heavy {
+  background: rgba(255, 255, 255, var(--glass-heavy-opacity));
+  backdrop-filter: blur(var(--glass-heavy-blur)) saturate(var(--glass-heavy-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-heavy-blur)) saturate(var(--glass-heavy-saturate));
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow-2), var(--card-shadow-1);
+  border-radius: 1.125rem;
+}
+
+.dark .glass-heavy {
+  background: rgba(17, 25, 40, 0.55);
+}
+
+/* ===== Medium Glass - Inputs and Dropdowns ===== */
+.glass-medium {
+  background: rgba(255, 255, 255, var(--glass-medium-opacity));
+  backdrop-filter: blur(var(--glass-medium-blur)) saturate(var(--glass-medium-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-medium-blur)) saturate(var(--glass-medium-saturate));
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+}
+
+.dark .glass-medium {
+  background: rgba(17, 25, 40, 0.7);
+}
+
+/* ===== Light Glass - Headers and Footers ===== */
+.glass-light {
+  background: rgba(255, 255, 255, var(--glass-light-opacity));
+  backdrop-filter: blur(var(--glass-light-blur)) saturate(var(--glass-light-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-light-blur)) saturate(var(--glass-light-saturate));
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+}
+
+.dark .glass-light {
+  background: rgba(17, 25, 40, 0.85);
+}
+
+/* ===== Subtle Glass - Table Rows and List Items ===== */
+.glass-subtle {
+  background: rgba(255, 255, 255, var(--glass-subtle-opacity));
+  backdrop-filter: blur(var(--glass-subtle-blur)) saturate(var(--glass-subtle-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-subtle-blur)) saturate(var(--glass-subtle-saturate));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+}
+
+.dark .glass-subtle {
+  background: rgba(17, 25, 40, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Glass Button Variant ===== */
+.glass-button {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-button {
+  background: rgba(17, 25, 40, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark .glass-button:hover {
+  background: rgba(17, 25, 40, 0.8);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================================================
+   DIALOG & MODAL STYLES
+   ======================================================================== */
+
+/* Glass overlay for dialogs */
+.dialog-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Glass dialog content */
+.dialog-content {
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: 1px solid var(--card-border);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    var(--card-shadow-2);
+  border-radius: 1.125rem;
+}
+
+/* ========================================================================
+   TABLE STYLES
+   ======================================================================== */
+
+/* Glass table wrapper */
+.table-glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+}
+
+/* Glass table header */
+.table-glass thead {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dark .table-glass thead {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Alternating row transparency */
+.table-glass tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .table-glass tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.table-glass tbody tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 0.15s ease;
+}
+
+.dark .table-glass tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================================================
+   DROPDOWN & POPOVER STYLES
+   ======================================================================== */
+
+/* Glass dropdown */
+.glass-dropdown {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(16px) saturate(var(--glass-saturate));
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), var(--card-shadow-2);
+  border-radius: 0.75rem;
+}
+
+/* Glass popover */
+.glass-popover {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(16px) saturate(var(--glass-saturate));
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), var(--card-shadow-2);
+  border-radius: 0.75rem;
+}
+
+/* ========================================================================
+   ADDITIONAL GRADIENT UTILITIES
+   ======================================================================== */
+
+/* Primary gradient */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--gradient-primary-start), var(--gradient-primary-mid), var(--gradient-primary-end));
+}
+
+/* Accent gradient */
+.bg-gradient-accent {
+  background: linear-gradient(90deg, var(--gradient-accent-start), var(--gradient-accent-end));
+}
+
+/* Text gradient utilities */
+.text-gradient-primary {
+  background: linear-gradient(90deg, var(--gradient-primary-start), var(--gradient-primary-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(90deg, var(--gradient-accent-start), var(--gradient-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-success {
+  background: linear-gradient(90deg, var(--gradient-success-start), var(--gradient-success-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================================================
+   MICRO-INTERACTIONS & ANIMATIONS (Section 7.2.3)
+   ======================================================================== */
+
+/* Hover lift effect for cards */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+}
+
+.dark .card-hover:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+/* Shimmer loading animation */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+.dark .shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Pulse effect for notifications */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.notification-pulse {
+  position: relative;
+}
+
+.notification-pulse::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background: var(--gradient-danger-end);
+  border-radius: 50%;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* Smooth transitions for interactive elements */
+.interactive-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================================================
+   RESPONSIVE ADJUSTMENTS (Section 7.2.5)
+   ======================================================================== */
+
+/* Reduce blur on mobile for performance - reduce by 4px */
+@media (max-width: 640px) {
+  :root {
+    --glass-blur: 12px;
+    --glass-heavy-blur: 16px;
+    --glass-medium-blur: 12px;
+    --glass-light-blur: 8px;
+    --glass-subtle-blur: 4px;
+
+    /* Increase opacity by 10% on mobile */
+    --glass-heavy-opacity: 0.5;
+    --glass-medium-opacity: 0.75;
+    --glass-light-opacity: 0.95;
+  }
+
+  .modern-card {
+    backdrop-filter: blur(16px);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(12px) saturate(var(--glass-saturate));
+  }
+
+  .glass-heavy {
+    backdrop-filter: blur(16px) saturate(var(--glass-heavy-saturate));
+  }
+
+  .glass-medium {
+    backdrop-filter: blur(12px) saturate(var(--glass-medium-saturate));
+  }
+}
+
+/* Accessibility - Disable animations and blur for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .modern-card,
+  .glass-card,
+  .glass-input,
+  .glass-heavy,
+  .glass-medium,
+  .glass-light,
+  .glass-subtle,
+  .glass-button,
+  .dialog-overlay,
+  .dialog-content,
+  .glass-dropdown,
+  .glass-popover,
+  .table-glass,
+  .table-glass thead {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+
+  .shimmer {
+    animation: none;
+    background: transparent;
+  }
+
+  .notification-pulse::before {
+    animation: none;
+  }
+}
+
+/* ========================================================================
+   END OF ENHANCED GLOBALS.CSS
+   ======================================================================== */

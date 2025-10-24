@@ -1,0 +1,342 @@
+src/app/dashboard/layout.tsx(6,10): error TS2305: Module '"@/components/auth/user-nav"' has no exported member 'UserAccountNav'.
+src/app/dashboard/layout.tsx(26,20): error TS2322: Type '{ items: { title: string; href: string; }[]; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'items' does not exist on type 'IntrinsicAttributes'.
+src/app/dashboard/reports/page.tsx(242,11): error TS2322: Type '{ stats: LeaveStats; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'stats' does not exist on type 'IntrinsicAttributes'.
+src/components/admin/holiday-management.tsx(188,31): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/admin/holiday-management.tsx(507,69): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/components/admin/holiday-management.tsx(521,58): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/components/calendar/calendar-event-form.tsx(34,78): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(schema: Zod3Type<CalendarEventFormData, CalendarEventFormData>, schemaOptions?: ParseParams | undefined, resolverOptions?: NonRawResolverOptions | undefined): Resolver<...>', gave the following error.
+    Argument of type 'ZodObject<{ title: ZodString; description: ZodOptional<ZodString>; start_date: ZodString; end_date: ZodString; event_type: ZodEnum<{ leave: "leave"; personal: "personal"; holiday: "holiday"; meeting: "meeting"; }>; is_all_day: ZodDefault<...>; color: ZodOptional<...>; location: ZodOptional<...>; employee_id: ZodOpti...' is not assignable to parameter of type 'Zod3Type<CalendarEventFormData, CalendarEventFormData>'.
+      The types of '_input.is_all_day' are incompatible between these types.
+        Type 'boolean | undefined' is not assignable to type 'boolean'.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 2 of 4, '(schema: $ZodType<CalendarEventFormData, CalendarEventFormData, $ZodTypeInternals<CalendarEventFormData, CalendarEventFormData>>, schemaOptions?: ParseContext<...> | undefined, resolverOptions?: NonRawResolverOptions | undefined): Resolver<...>', gave the following error.
+    Argument of type 'ZodObject<{ title: ZodString; description: ZodOptional<ZodString>; start_date: ZodString; end_date: ZodString; event_type: ZodEnum<{ leave: "leave"; personal: "personal"; holiday: "holiday"; meeting: "meeting"; }>; is_all_day: ZodDefault<...>; color: ZodOptional<...>; location: ZodOptional<...>; employee_id: ZodOpti...' is not assignable to parameter of type '$ZodType<CalendarEventFormData, CalendarEventFormData, $ZodTypeInternals<CalendarEventFormData, CalendarEventFormData>>'.
+      The types of '_zod.input.is_all_day' are incompatible between these types.
+        Type 'boolean | undefined' is not assignable to type 'boolean'.
+          Type 'undefined' is not assignable to type 'boolean'.
+src/components/documents/document-categorization.tsx(154,11): error TS2353: Object literal may only specify known properties, and 'title' does not exist in type 'ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...> | (() => ReactNode)'.
+src/components/documents/document-categorization.tsx(162,9): error TS2353: Object literal may only specify known properties, and 'title' does not exist in type 'ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...> | (() => ReactNode)'.
+src/components/documents/document-categorization.tsx(176,28): error TS2339: Property 'createElement' does not exist on type 'Document'.
+src/components/documents/document-categorization.tsx(179,18): error TS2339: Property 'body' does not exist on type 'Document'.
+src/components/documents/document-categorization.tsx(181,18): error TS2339: Property 'body' does not exist on type 'Document'.
+src/components/documents/document-categorization.tsx(298,33): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/components/documents/document-categorization.tsx(354,39): error TS2304: Cannot find name 'cn'.
+src/components/documents/document-categorization.tsx(359,19): error TS2353: Object literal may only specify known properties, and 'query' does not exist in type '{ category?: string | undefined; status?: "all" | "active" | "expired" | undefined; dateFrom?: string | undefined; dateTo?: string | undefined; }'.
+src/components/documents/document-categorization.tsx(471,39): error TS2339: Property 'hasPrev' does not exist on type '{ page: number; limit: number; total: number; totalPages: number; }'.
+src/components/documents/document-categorization.tsx(484,39): error TS2339: Property 'hasNext' does not exist on type '{ page: number; limit: number; total: number; totalPages: number; }'.
+src/components/documents/document-upload.tsx(228,33): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/components/leave-balance/leave-balance-widget.tsx(58,49): error TS2339: Property 'leaveTypeColor' does not exist on type 'LeaveBalance'.
+src/components/leave-balance/leave-balance-widget.tsx(60,53): error TS2339: Property 'leaveTypeName' does not exist on type 'LeaveBalance'.
+src/components/leave-balance/leave-balance-widget.tsx(236,71): error TS2339: Property 'leaveTypeName' does not exist on type 'LeaveBalance'.
+src/components/leave-request/leave-approval-workflow.tsx(257,16): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(257,80): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(261,16): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(261,78): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(265,16): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(265,80): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(269,16): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(269,80): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(276,16): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(276,86): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(285,16): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(285,87): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(317,18): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(317,83): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(321,18): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(321,80): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(330,18): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(330,88): error TS2552: Cannot find name 'Label'. Did you mean 'babel'?
+src/components/leave-request/leave-approval-workflow.tsx(355,18): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(355,76): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(414,20): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(414,71): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(459,20): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(459,74): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(505,20): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(505,80): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(575,61): error TS2339: Property 'department' does not exist on type 'User'.
+src/components/leave-request/leave-approval-workflow.tsx(888,16): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(888,55): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(904,16): error TS2304: Cannot find name 'Label'.
+src/components/leave-request/leave-approval-workflow.tsx(904,63): error TS2304: Cannot find name 'Label'.
+src/components/leave/leave-request-detail.tsx(155,18): error TS2322: Type '"destructive" | "secondary" | "success" | "warning"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+  Type '"success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/components/leave/leave-request-detail.tsx(206,18): error TS2339: Property 'reviewer_comment' does not exist on type 'Leave'.
+src/components/leave/leave-request-detail.tsx(211,27): error TS2339: Property 'reviewer_comment' does not exist on type 'Leave'.
+src/components/leave/leave-request-form.tsx(170,38): error TS7006: Parameter 'date' implicitly has an 'any' type.
+src/components/leave/leave-request-form.tsx(171,38): error TS7006: Parameter 'date' implicitly has an 'any' type.
+src/components/leave/leave-request-form.tsx(214,38): error TS7006: Parameter 'date' implicitly has an 'any' type.
+src/components/leave/leave-request-form.tsx(215,38): error TS7006: Parameter 'date' implicitly has an 'any' type.
+src/components/leave/leave-request-list.tsx(85,28): error TS2339: Property 'name' does not exist on type 'Employee'.
+src/components/leave/leave-request-list.tsx(138,31): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/components/leave/leave-request-list.tsx(153,31): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/components/leave/leave-request-list.tsx(197,50): error TS2339: Property 'name' does not exist on type 'Employee'.
+src/components/leave/leave-request-list.tsx(203,30): error TS2322: Type '"destructive" | "secondary" | "success" | "warning"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+  Type '"success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/components/leave/leave-request-list.tsx(210,66): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/components/leave/leave-request-list.tsx(217,41): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(76,26): error TS2339: Property 'priority' does not exist on type 'Notification'.
+src/components/notifications/notification-center.tsx(118,33): error TS2339: Property 'priority' does not exist on type 'Notification'.
+src/components/notifications/notification-center.tsx(132,31): error TS2339: Property 'relatedEntityId' does not exist on type 'Notification'.
+src/components/notifications/notification-center.tsx(185,35): error TS2339: Property 'updateNotificationPreferences' does not exist on type 'NotificationService'.
+src/components/notifications/notification-center.tsx(211,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(222,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(233,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(247,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(255,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(263,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(271,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(297,48): error TS2339: Property 'subscribeToNotifications' does not exist on type 'NotificationService'.
+src/components/notifications/notification-center.tsx(299,10): error TS7006: Parameter 'notification' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(318,59): error TS2551: Property 'getUserNotifications' does not exist on type 'NotificationService'. Did you mean 'getNotifications'?
+src/components/notifications/notification-center.tsx(320,47): error TS7006: Parameter 'n' implicitly has an 'any' type.
+src/components/notifications/notification-center.tsx(369,33): error TS2339: Property 'clearAllNotifications' does not exist on type 'NotificationService'.
+src/components/reports/reporting-dashboard.tsx(25,8): error TS2307: Cannot find module 'recharts' or its corresponding type declarations.
+src/components/reports/reporting-dashboard.tsx(173,36): error TS2349: This expression is not callable.
+  No constituent of type '"pdf" | "excel" | "csv"' is callable.
+src/components/reports/reporting-dashboard.tsx(180,9): error TS2353: Object literal may only specify known properties, and 'title' does not exist in type 'ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...> | (() => ReactNode)'.
+src/components/reports/reporting-dashboard.tsx(186,9): error TS2353: Object literal may only specify known properties, and 'title' does not exist in type 'ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...> | (() => ReactNode)'.
+src/components/reports/reporting-dashboard.tsx(231,17): error TS2322: Type '{ date: { from: Date; to: Date; }; onDateChange: Dispatch<SetStateAction<{ from: Date; to: Date; }>>; }' is not assignable to type 'IntrinsicAttributes & HTMLAttributes<HTMLDivElement>'.
+  Property 'date' does not exist on type 'IntrinsicAttributes & HTMLAttributes<HTMLDivElement>'.
+src/components/reports/reporting-dashboard.tsx(291,20): error TS2322: Type '"success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/components/reports/reporting-dashboard.tsx(338,29): error TS7031: Binding element 'name' implicitly has an 'any' type.
+src/components/reports/reporting-dashboard.tsx(338,35): error TS7031: Binding element 'percentage' implicitly has an 'any' type.
+src/components/ui/calendar.tsx(9,60): error TS2307: Cannot find module 'react-day-picker' or its corresponding type declarations.
+src/components/ui/calendar.tsx(39,31): error TS7006: Parameter 'date' implicitly has an 'any' type.
+src/components/ui/calendar.tsx(128,18): error TS7031: Binding element 'className' implicitly has an 'any' type.
+src/components/ui/calendar.tsx(128,29): error TS7031: Binding element 'rootRef' implicitly has an 'any' type.
+src/components/ui/calendar.tsx(138,21): error TS7031: Binding element 'className' implicitly has an 'any' type.
+src/components/ui/calendar.tsx(138,32): error TS7031: Binding element 'orientation' implicitly has an 'any' type.
+src/components/ui/calendar.tsx(159,24): error TS7031: Binding element 'children' implicitly has an 'any' type.
+src/components/ui/checkbox.tsx(4,36): error TS2307: Cannot find module '@radix-ui/react-checkbox' or its corresponding type declarations.
+src/components/ui/command.tsx(5,45): error TS2307: Cannot find module 'cmdk' or its corresponding type declarations.
+src/components/ui/date-range-picker.tsx(4,27): error TS2307: Cannot find module 'react-day-picker' or its corresponding type declarations.
+src/components/ui/dropdown-menu.tsx(4,40): error TS2307: Cannot find module '@radix-ui/react-dropdown-menu' or its corresponding type declarations.
+src/components/ui/form.tsx(4,33): error TS2307: Cannot find module '@radix-ui/react-label' or its corresponding type declarations.
+src/components/ui/label.tsx(4,33): error TS2307: Cannot find module '@radix-ui/react-label' or its corresponding type declarations.
+src/components/ui/popover.tsx(4,35): error TS2307: Cannot find module '@radix-ui/react-popover' or its corresponding type declarations.
+src/components/ui/progress.tsx(2,36): error TS2307: Cannot find module '@radix-ui/react-progress' or its corresponding type declarations.
+src/components/ui/radio-group.tsx(4,38): error TS2307: Cannot find module '@radix-ui/react-radio-group' or its corresponding type declarations.
+src/components/ui/scroll-area.tsx(2,38): error TS2307: Cannot find module '@radix-ui/react-scroll-area' or its corresponding type declarations.
+src/components/ui/select.tsx(4,34): error TS2307: Cannot find module '@radix-ui/react-select' or its corresponding type declarations.
+src/components/ui/separator.tsx(4,37): error TS2307: Cannot find module '@radix-ui/react-separator' or its corresponding type declarations.
+src/components/ui/sonner.tsx(3,26): error TS2307: Cannot find module 'next-themes' or its corresponding type declarations.
+src/components/ui/switch.tsx(2,35): error TS2307: Cannot find module '@radix-ui/react-switch' or its corresponding type declarations.
+src/components/ui/tabs.tsx(4,32): error TS2307: Cannot find module '@radix-ui/react-tabs' or its corresponding type declarations.
+src/lib/services/calendar-service.ts(108,29): error TS2345: Argument of type '(item: LeaveEventRow) => { id: string; employeeName: string; employeeId: string; leaveType: string; startDate: Date; endDate: Date; status: LeaveEvent["status"]; color: string; }' is not assignable to parameter of type '(value: { id: any; start_date: any; end_date: any; status: any; leave_types: { id: any; name: any; color: any; }[]; employees: { id: any; first_name: any; last_name: any; department_id: any; }[]; }, index: number, array: { ...; }[]) => { ...; }'.
+  Types of parameters 'item' and 'value' are incompatible.
+    Type '{ id: any; start_date: any; end_date: any; status: any; leave_types: { id: any; name: any; color: any; }[]; employees: { id: any; first_name: any; last_name: any; department_id: any; }[]; }' is not assignable to type 'LeaveEventRow'.
+      Types of property 'leave_types' are incompatible.
+        Type '{ id: any; name: any; color: any; }[]' is missing the following properties from type '{ id: string; name: string; color?: string | null | undefined; }': id, name
+src/lib/services/notification-service.ts(52,57): error TS2345: Argument of type '{ [key: string]: any; }' is not assignable to parameter of type 'SupabaseNotification'.
+  Type '{ [key: string]: any; }' is missing the following properties from type 'SupabaseNotification': id, user_id, type, title, and 3 more.
+src/lib/services/rbac-service.ts(207,7): error TS2322: Type 'boolean | null' is not assignable to type 'boolean'.
+  Type 'null' is not assignable to type 'boolean'.
+src/lib/services/rbac-service.ts(257,66): error TS2339: Property 'id' does not exist on type '{ id: any; name: any; description: any; is_system: any; }[]'.
+src/lib/services/rbac-service.ts(259,22): error TS2339: Property 'id' does not exist on type '{ id: any; name: any; description: any; is_system: any; }[]'.
+src/lib/services/rbac-service.ts(260,24): error TS2339: Property 'name' does not exist on type '{ id: any; name: any; description: any; is_system: any; }[]'.
+src/lib/services/rbac-service.ts(261,31): error TS2339: Property 'description' does not exist on type '{ id: any; name: any; description: any; is_system: any; }[]'.
+src/lib/services/rbac-service.ts(262,28): error TS2339: Property 'is_system' does not exist on type '{ id: any; name: any; description: any; is_system: any; }[]'.
+src/lib/services/rbac-service.ts(297,28): error TS2339: Property 'id' does not exist on type '{ id: any; name: any; description: any; resource: any; action: any; }[]'.
+src/lib/services/rbac-service.ts(298,30): error TS2339: Property 'name' does not exist on type '{ id: any; name: any; description: any; resource: any; action: any; }[]'.
+src/lib/services/rbac-service.ts(299,37): error TS2339: Property 'description' does not exist on type '{ id: any; name: any; description: any; resource: any; action: any; }[]'.
+src/lib/services/rbac-service.ts(300,34): error TS2339: Property 'resource' does not exist on type '{ id: any; name: any; description: any; resource: any; action: any; }[]'.
+src/lib/services/rbac-service.ts(301,32): error TS2339: Property 'action' does not exist on type '{ id: any; name: any; description: any; resource: any; action: any; }[]'.
+src/lib/supabase/server.ts(5,39): error TS2353: Object literal may only specify known properties, and 'cookies' does not exist in type 'GetServerSidePropsContext | { req: NextApiRequest; res: NextApiResponse; }'.
+src/lib/utils.ts(2,25): error TS2307: Cannot find module 'tailwind-merge' or its corresponding type declarations.
+src/lib/validations/employee.ts(7,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(values: readonly ["employee", "manager", "admin", "hr"], params?: string | { error?: string | $ZodErrorMap<$ZodIssueInvalidValue<unknown>> | undefined; message?: string | undefined; } | undefined): ZodEnum<...>', gave the following error.
+    Object literal may only specify known properties, and 'required_error' does not exist in type '{ error?: string | $ZodErrorMap<$ZodIssueInvalidValue<unknown>> | undefined; message?: string | undefined; }'.
+  Overload 2 of 2, '(entries: Readonly<Record<string, EnumValue>>, params?: string | { error?: string | $ZodErrorMap<$ZodIssueInvalidValue<unknown>> | undefined; message?: string | undefined; } | undefined): ZodEnum<...>', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Readonly<Record<string, EnumValue>>'.
+      Index signature for type 'string' is missing in type 'string[]'.
+src/lib/validations/leave.ts(25,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(values: readonly ["approved", "rejected"], params?: string | { error?: string | $ZodErrorMap<$ZodIssueInvalidValue<unknown>> | undefined; message?: string | undefined; } | undefined): ZodEnum<...>', gave the following error.
+    Object literal may only specify known properties, and 'required_error' does not exist in type '{ error?: string | $ZodErrorMap<$ZodIssueInvalidValue<unknown>> | undefined; message?: string | undefined; }'.
+  Overload 2 of 2, '(entries: Readonly<Record<string, EnumValue>>, params?: string | { error?: string | $ZodErrorMap<$ZodIssueInvalidValue<unknown>> | undefined; message?: string | undefined; } | undefined): ZodEnum<...>', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Readonly<Record<string, EnumValue>>'.
+      Index signature for type 'string' is missing in type 'string[]'.
+src/middleware.ts(16,19): error TS2339: Property 'session' does not exist on type '{ user: User; } | { user: null; }'.
+src/tests/calendar-documents-reports.test.tsx(2,41): error TS2307: Cannot find module '@testing-library/react' or its corresponding type declarations.
+src/tests/calendar-documents-reports.test.tsx(3,23): error TS2307: Cannot find module '@testing-library/user-event' or its corresponding type declarations.
+src/tests/calendar-documents-reports.test.tsx(12,1): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(14,11): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(15,15): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(16,13): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(20,16): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(25,15): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(26,17): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(27,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(34,15): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(35,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(46,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(61,39): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(62,38): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(63,37): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(64,38): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(75,24): error TS2339: Property 'toHaveClass' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(89,39): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(97,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(98,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(102,44): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(103,50): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(104,49): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(105,47): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(106,49): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(111,22): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(116,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(125,53): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(131,22): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(136,19): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(161,28): error TS2322: Type '{ onUploadComplete: any; }' is not assignable to type 'IntrinsicAttributes & DocumentUploadProps'.
+  Property 'onUploadComplete' does not exist on type 'IntrinsicAttributes & DocumentUploadProps'.
+src/tests/calendar-documents-reports.test.tsx(161,46): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(163,58): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(164,36): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(165,46): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(172,28): error TS2322: Type '{ onUploadComplete: any; }' is not assignable to type 'IntrinsicAttributes & DocumentUploadProps'.
+  Property 'onUploadComplete' does not exist on type 'IntrinsicAttributes & DocumentUploadProps'.
+src/tests/calendar-documents-reports.test.tsx(172,46): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(177,42): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(184,28): error TS2322: Type '{ onUploadComplete: any; }' is not assignable to type 'IntrinsicAttributes & DocumentUploadProps'.
+  Property 'onUploadComplete' does not exist on type 'IntrinsicAttributes & DocumentUploadProps'.
+src/tests/calendar-documents-reports.test.tsx(184,46): error TS2304: Cannot find name 'vi'.
+src/tests/calendar-documents-reports.test.tsx(190,57): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(213,26): error TS2322: Type '{ id: string; title: string; description: string; file_name: string; file_size: number; file_type: string; category: { name: string; }; employees: { first_name: string; last_name: string; }; created_at: string; confidentiality: string; tags: string[]; }[]' is not assignable to type 'DocumentWithRelations[]'.
+  Type '{ id: string; title: string; description: string; file_name: string; file_size: number; file_type: string; category: { name: string; }; employees: { first_name: string; last_name: string; }; created_at: string; confidentiality: string; tags: string[]; }' is missing the following properties from type 'DocumentWithRelations': employee, employee_id, category_id, file_path, and 6 more.
+src/tests/calendar-documents-reports.test.tsx(215,51): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(216,65): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(217,42): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(222,26): error TS2322: Type '{ id: string; title: string; description: string; file_name: string; file_size: number; file_type: string; category: { name: string; }; employees: { first_name: string; last_name: string; }; created_at: string; confidentiality: string; tags: string[]; }[]' is not assignable to type 'DocumentWithRelations[]'.
+  Type '{ id: string; title: string; description: string; file_name: string; file_size: number; file_type: string; category: { name: string; }; employees: { first_name: string; last_name: string; }; created_at: string; confidentiality: string; tags: string[]; }' is missing the following properties from type 'DocumentWithRelations': employee, employee_id, category_id, file_path, and 6 more.
+src/tests/calendar-documents-reports.test.tsx(227,51): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(232,26): error TS2322: Type '{ id: string; title: string; description: string; file_name: string; file_size: number; file_type: string; category: { name: string; }; employees: { first_name: string; last_name: string; }; created_at: string; confidentiality: string; tags: string[]; }[]' is not assignable to type 'DocumentWithRelations[]'.
+  Type '{ id: string; title: string; description: string; file_name: string; file_size: number; file_type: string; category: { name: string; }; employees: { first_name: string; last_name: string; }; created_at: string; confidentiality: string; tags: string[]; }' is missing the following properties from type 'DocumentWithRelations': employee, employee_id, category_id, file_path, and 6 more.
+src/tests/calendar-documents-reports.test.tsx(237,51): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(252,32): error TS2322: Type '{ stats: { totalRequests: number; approvedRequests: number; pendingRequests: number; rejectedRequests: number; utilizationRate: number; averageProcessingTime: number; }; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'stats' does not exist on type 'IntrinsicAttributes'.
+src/tests/calendar-documents-reports.test.tsx(254,36): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(255,36): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(256,35): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(257,35): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(258,39): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(259,42): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(263,32): error TS2322: Type '{ stats: { totalRequests: number; approvedRequests: number; pendingRequests: number; rejectedRequests: number; utilizationRate: number; averageProcessingTime: number; }; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'stats' does not exist on type 'IntrinsicAttributes'.
+src/tests/calendar-documents-reports.test.tsx(297,30): error TS2322: Type '{ employeeId: string; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'employeeId' does not exist on type 'IntrinsicAttributes'.
+src/tests/calendar-documents-reports.test.tsx(300,37): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(306,30): error TS2322: Type '{ employeeId: string; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'employeeId' does not exist on type 'IntrinsicAttributes'.
+src/tests/calendar-documents-reports.test.tsx(314,49): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(315,62): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(316,58): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<any>'.
+src/tests/calendar-documents-reports.test.tsx(322,30): error TS2322: Type '{ employeeId: string; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'employeeId' does not exist on type 'IntrinsicAttributes'.
+src/tests/document-categorization-integration.test.tsx(86,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; description: string; is_active: boolean; created_at: string; updated_at: string; }[]; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; description: string; is_active: boolean; created_at: string; updated_at: string; }[]; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; description: string; is_active: boolean; created_at: string; updated_at: string; }[]; }>; }' is missing the following properties from type 'Response': headers, redirected, status, statusText, and 10 more.
+src/tests/document-categorization-integration.test.tsx(108,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; json: () => Promise<{ data: { name: string; description: string; is_active: boolean; id: string; }; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; json: () => Promise<{ data: { name: string; description: string; is_active: boolean; id: string; }; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; json: () => Promise<{ data: { name: string; description: string; is_active: boolean; id: string; }; }>; }' is missing the following properties from type 'Response': headers, redirected, status, statusText, and 10 more.
+src/tests/document-categorization-integration.test.tsx(150,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; file_type: string; file_size: number; uploaded_at: string; expiry_date: string; tags: string[]; description: string; employees: { first_name: string; last_name: string; }; departments: { ...; }; document_categories: { ...; }; }...' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; file_type: string; file_size: number; uploaded_at: string; expiry_date: string; tags: string[]; description: string; employees: { first_name: string; last_name: string; }; departments: { ...; }; document_categories: { ...; }; }[]; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; file_type: string; file_size: number; uploaded_at: string; expiry_date: string; tags: string[]; description: string; employees: { first_name: string; last_name: string; }; departments: { ...; }; document_categories: { ...; }; }[]; }>; }' is missing the following properties from type 'Response': headers, redirected, status, statusText, and 10 more.
+src/tests/document-categorization-integration.test.tsx(166,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; json: () => Promise<{ data: never[]; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; json: () => Promise<{ data: never[]; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; json: () => Promise<{ data: never[]; }>; }' is missing the following properties from type 'Response': headers, redirected, status, statusText, and 10 more.
+src/tests/document-categorization-integration.test.tsx(189,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/document-categorization-integration.test.tsx(223,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; file_type: string; file_size: number; uploaded_at: string; }; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; file_type: string; file_size: number; uploaded_at: string; }; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; json: () => Promise<{ data: { id: string; name: string; file_type: string; file_size: number; uploaded_at: string; }; }>; }' is missing the following properties from type 'Response': headers, redirected, status, statusText, and 10 more.
+src/tests/document-categorization-integration.test.tsx(247,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; json: () => Promise<{ data: { success: boolean; }; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; json: () => Promise<{ data: { success: boolean; }; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; json: () => Promise<{ data: { success: boolean; }; }>; }' is missing the following properties from type 'Response': headers, redirected, status, statusText, and 10 more.
+src/tests/document-categorization-integration.test.tsx(262,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(78,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(105,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(130,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(156,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; status: number; json: () => Promise<{ error: string; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; status: number; json: () => Promise<{ error: string; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; status: number; json: () => Promise<{ error: string; }>; }' is missing the following properties from type 'Response': headers, redirected, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(179,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; status: number; json: () => Promise<{ error: string; }>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; status: number; json: () => Promise<{ error: string; }>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; status: number; json: () => Promise<{ error: string; }>; }' is missing the following properties from type 'Response': headers, redirected, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(228,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(253,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+src/tests/export-integration.test.tsx(280,7): error TS2322: Type 'Mock<() => Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>>' is not assignable to type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Type 'Promise<{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }>' is not assignable to type 'Promise<Response>'.
+    Type '{ ok: boolean; headers: Headers; blob: () => Promise<Blob>; }' is missing the following properties from type 'Response': redirected, status, statusText, type, and 9 more.
+tests/e2e/critical-flows.spec.ts(5,7): error TS7034: Variable 'testUser' implicitly has type 'any' in some locations where its type cannot be determined.
+tests/e2e/critical-flows.spec.ts(25,9): error TS7005: Variable 'testUser' implicitly has an 'any' type.
+tests/e2e/critical-flows.spec.ts(99,21): error TS2339: Property 'setFiles' does not exist on type 'Locator'.
+tests/e2e/critical-flows.spec.ts(228,54): error TS7005: Variable 'testUser' implicitly has an 'any' type.
+tests/e2e/security.spec.ts(5,7): error TS7034: Variable 'testUser' implicitly has type 'any' in some locations where its type cannot be determined.
+tests/e2e/security.spec.ts(25,9): error TS7005: Variable 'testUser' implicitly has an 'any' type.
+tests/e2e/security.spec.ts(51,21): error TS2339: Property 'alertTriggered' does not exist on type 'Window & typeof globalThis'.
+tests/e2e/security.spec.ts(125,7): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+tests/e2e/security.spec.ts(138,29): error TS18047: 'form' is possibly 'null'.
+tests/e2e/security.spec.ts(176,13): error TS18047: 'fileInput' is possibly 'null'.
+tests/e2e/security.spec.ts(190,13): error TS18047: 'fileInput' is possibly 'null'.
+tests/e2e/security.spec.ts(231,12): error TS18048: 'sessionCookie' is possibly 'undefined'.
+tests/e2e/security.spec.ts(232,12): error TS18048: 'sessionCookie' is possibly 'undefined'.
+tests/e2e/security.spec.ts(294,78): error TS2339: Property 'value' does not exist on type 'SVGElement | HTMLElement'.
+  Property 'value' does not exist on type 'SVGElement'.
+vitest.config.ts(6,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'PluginOption[]' is not assignable to type 'PluginOption'.
+      Type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").PluginOption[]' is not assignable to type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").PluginOption[]'.
+        Type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").PluginOption' is not assignable to type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").PluginOption'.
+          Type 'Plugin$1<any>' is not assignable to type 'PluginOption'.
+            Type 'Plugin$1<any>' is not assignable to type 'Plugin<any>'.
+              Types of property 'apply' are incompatible.
+                Type '"serve" | "build" | ((this: void, config: import("C:/Users/Twisted/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/node_modules/vite/dist/node/index").ConfigEnv) => boolean) | undefined' is not assignable to type '"serve" | "build" | ((this: void, config: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").ConfigEnv) => boolean) | undefined'.
+                  Type '(this: void, config: UserConfig, env: ConfigEnv) => boolean' is not assignable to type '"serve" | "build" | ((this: void, config: UserConfig, env: ConfigEnv) => boolean) | undefined'.
+                    Type '(this: void, config: import("C:/Users/Twisted/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/node_modules/vite/dist/node/index").ConfigEnv) => boolean' is not assignable to type '(this: void, config: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").ConfigEnv) => boolean'.
+                      Types of parameters 'config' and 'config' are incompatible.
+                        Type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").UserConfig' is not assignable to type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").UserConfig'.
+                          Types of property 'plugins' are incompatible.
+                            Type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").PluginOption[] | undefined' is not assignable to type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").PluginOption[] | undefined'.
+                              Type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").PluginOption[]' is not assignable to type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").PluginOption[]'.
+                                Type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").PluginOption' is not assignable to type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").PluginOption'.
+                                  Type 'Plugin<any>' is not assignable to type 'PluginOption'.
+                                    Type 'Plugin<any>' is not assignable to type 'Plugin$1<any>'.
+                                      Types of property 'apply' are incompatible.
+                                        Type '"serve" | "build" | ((this: void, config: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").ConfigEnv) => boolean) | undefined' is not assignable to type '"serve" | "build" | ((this: void, config: import("C:/Users/Twisted/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/node_modules/vite/dist/node/index").ConfigEnv) => boolean) | undefined'.
+                                          Type '(this: void, config: UserConfig, env: ConfigEnv) => boolean' is not assignable to type '"serve" | "build" | ((this: void, config: UserConfig, env: ConfigEnv) => boolean) | undefined'.
+                                            Type '(this: void, config: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").ConfigEnv) => boolean' is not assignable to type '(this: void, config: import("C:/Users/Twisted/node_modules/vite/dist/node/index").UserConfig, env: import("C:/Users/Twisted/node_modules/vite/dist/node/index").ConfigEnv) => boolean'.
+                                              Types of parameters 'config' and 'config' are incompatible.
+                                                Type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").UserConfig' is not assignable to type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").UserConfig'.
+                                                  Types of property 'resolve' are incompatible.
+                                                    Type 'AllResolveOptions | undefined' is not assignable to type '(ResolveOptions & { alias?: AliasOptions | undefined; }) | undefined'.
+                                                      Type 'AllResolveOptions' is not assignable to type '(ResolveOptions & { alias?: AliasOptions | undefined; }) | undefined'.
+                                                        Type 'AllResolveOptions' is not assignable to type 'ResolveOptions & { alias?: AliasOptions | undefined; }'.
+                                                          Type 'AllResolveOptions' is not assignable to type '{ alias?: AliasOptions | undefined; }'.
+                                                            Types of property 'alias' are incompatible.
+                                                              Type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").AliasOptions | undefined' is not assignable to type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").AliasOptions | undefined'.
+                                                                Type 'readonly Alias[]' is not assignable to type 'AliasOptions | undefined'.
+                                                                  Type 'readonly import("C:/Users/Twisted/node_modules/vite/dist/node/index").Alias[]' is not assignable to type 'readonly import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").Alias[]'.
+                                                                    Type 'import("C:/Users/Twisted/node_modules/vite/dist/node/index").Alias' is not assignable to type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/vite/dist/node/index").Alias'.
+                                                                      Types of property 'customResolver' are incompatible.
+                                                                        Type '((this: import("C:/Users/Twisted/node_modules/rollup/dist/rollup").PluginContext, source: string, importer: string | undefined, options: { attributes: Record<string, string>; custom?: import("C:/Users/Twisted/node_modules/rollup/dist/rollup").CustomPluginOptions | undefined; isEntry: boolean; }) => import("C:/Users/...' is not assignable to type '((this: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/rollup/dist/rollup").PluginContext, source: string, importer: string | undefined, options: { attributes: Record<string, string>; custom?: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/rollup/dist/rollup").CustomPluginOptions | un...'.
+                                                                          Type '(this: PluginContext, source: string, importer: string | undefined, options: { attributes: Record<string, string>; custom?: CustomPluginOptions | undefined; isEntry: boolean; }) => ResolveIdResult | Promise<...>' is not assignable to type '((this: PluginContext, source: string, importer: string | undefined, options: { attributes: Record<string, string>; custom?: CustomPluginOptions | undefined; isEntry: boolean; }) => ResolveIdResult | Promise<...>) | ResolverObject | null | undefined'.
+                                                                            Type '(this: import("C:/Users/Twisted/node_modules/rollup/dist/rollup").PluginContext, source: string, importer: string | undefined, options: { attributes: Record<string, string>; custom?: import("C:/Users/Twisted/node_modules/rollup/dist/rollup").CustomPluginOptions | undefined; isEntry: boolean; }) => import("C:/Users/T...' is not assignable to type '(this: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/rollup/dist/rollup").PluginContext, source: string, importer: string | undefined, options: { attributes: Record<string, string>; custom?: import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/rollup/dist/rollup").CustomPluginOptions | und...'.
+                                                                              The 'this' types of each signature are incompatible.
+                                                                                Property 'environment' is missing in type 'import("C:/Users/Twisted/Desktop/LEAVE-MANAGEMENT/node_modules/rollup/dist/rollup").PluginContext' but required in type 'import("C:/Users/Twisted/node_modules/rollup/dist/rollup").PluginContext'.

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "prod-code-quality-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "fastmcp",
+        "fastmcp",
+        "run",
+        "C:\\Users\\Twisted\\Downloads\\mcp_prod_package_full\\server.py"
+      ]
+    }
+  }
+}

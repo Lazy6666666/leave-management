@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend - Leave Management System
+
+This directory contains the frontend for the Leave Management System, a Next.js application designed for internal use with plans for external deployment. It provides the user interface for employees and managers to interact with the system.
+
+## Project Purpose
+
+The primary goal of this application is to streamline the process of requesting and managing leave. Key features include:
+
+*   **Leave Requests**: Employees can submit requests for various types of leave.
+*   **Leave Balance**: Users can view their remaining leave balances.
+*   **Request Status**: Track the status of submitted requests (pending, approved, denied).
+*   **Manager Dashboard**: Managers have a dedicated view to approve or deny leave requests from their team.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get the development environment up and running.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   Node.js (v18 or later)
+*   npm (or yarn/pnpm)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Setup and Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Navigate to the Frontend Directory**
+    ```bash
+    cd frontend
+    ```
 
-## Learn More
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+3.  **Configure Environment Variables**
+    Create a `.env.local` file in the `frontend` directory. This file will store your Supabase credentials.
+    ```
+    NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_PROJECT_URL
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+    ```
+    *Note: These credentials connect the frontend to your hosted Supabase instance.*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4.  **Run the Development Server**
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application should now be running on [http://localhost:3000](http://localhost:3000).
 
-## Deploy on Vercel
+## Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project is configured with both unit and end-to-end tests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   **Unit Tests**: Run the unit tests using Vitest:
+    ```bash
+    npm test
+    ```
+
+*   **End-to-End Tests**: Run the E2E tests using Playwright:
+    ```bash
+    npm run test:e2e
+    ```
+
+## Deployment
+
+The easiest way to deploy this Next.js application is with the [Vercel Platform](https://vercel.com/new). For more details, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
